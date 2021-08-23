@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BiodataController;
+use App\Http\Controllers\CvUploadController;
 use App\Http\Controllers\PassportUploadController;
 
 /*
@@ -22,6 +24,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('passport', PassportUploadController::class);
+Route::resource('passport', PassportUploadController::class)->middleware('auth');
+Route::resource('biodata', BiodataController::class)->middleware('auth');
+Route::resource('cv', CvUploadController::class)->middleware('auth');
 
 

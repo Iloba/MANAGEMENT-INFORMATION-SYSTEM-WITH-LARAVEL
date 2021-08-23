@@ -17,7 +17,7 @@
                     <div class="row">
                         
                         <div class="col-md-8">
-                            <form method="POST" action="{{route('passport.store')}}">
+                            <form method="POST" action="{{route('passport.store')}}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="d-flex">
                                     <input type="file" name="passport" class="form-control ml-3"> <br>
@@ -28,7 +28,7 @@
                             </form>
                         </div>
                         <div class="col-md-4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fuga consectetur deserunt. Illo in minima doloremque cumque dolorum maiores mollitia fuga praesentium! Pariatur et ab vitae error sed ratione facere!
+                            <img style="max-width: 120px" class="img-fluid rounded" src="{{asset('uploads/passport_photographs/'.auth()->user()->passport)}}" alt="User Passport">
                         </div>
                         
                     </div>

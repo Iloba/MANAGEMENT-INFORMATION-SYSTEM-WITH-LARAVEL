@@ -51,6 +51,11 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
+        // Declare my public storage
+        'public_uploads' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/uploads',
+        ],
 
     ],
 

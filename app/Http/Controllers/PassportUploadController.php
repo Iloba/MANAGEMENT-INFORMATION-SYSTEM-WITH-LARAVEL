@@ -2,91 +2,54 @@
 
 namespace App\Http\Controllers;
 
+use auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\UploadPassportRequest;
 
 class PassportUploadController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+    
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('staff.passport');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(UploadPassportRequest $request)
     {
         if($request->hasFile('passport')){
 
-            //getname 
-            $user_passport = $request->passport->getClientOriginalName();
+            //get image name
+            $getimagename = $request->passport->getClientOriginalName();
 
-            dd($user_passport);
+            //Store image 
+            try{
+
+                $request->passport->storeAs('passport_photographs', $getimagename, 'public_uploads');
+            
+            } catch (Exception $error){
+                return back()->with('errors', 'Could not upload passport, please Try again');
+            }
+           
 
         }
+
+        auth()->user()->update([
+            'passport' => $getimagename
+        ]);
+
+        return back()->with('success', 'Passport Updated Succesfully');
+
+        
+
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+   
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+   
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
+    
 }
