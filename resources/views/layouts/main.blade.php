@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Employee-management-app</title>
+    <title>MIS</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -46,7 +46,7 @@
             <li class="nav-item ">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-users"></i>
-                    <span>Employee Management</span></a>
+                    <span>Staff Details</span></a>
             </li>
 
             <!-- Divider -->
@@ -56,7 +56,7 @@
            
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -71,21 +71,21 @@
                         <a class="collapse-item" href="cards.html">Department</a>
                     </div>
                 </div>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseThree">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>User Management</span>
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Update Biodata</span>
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Manage User</h6>
-                        <a class="collapse-item" href="">Users</a>
-                        <a class="collapse-item" href="cards.html">Role</a>
-                        <a class="collapse-item" href="cards.html">Permission</a>
-                        <a class="collapse-item" href="cards.html">Department</a>
+                        <h6 class="collapse-header">Manage Details</h6>
+                        <a class="collapse-item" href="">Upload Passport</a>
+                        <a class="collapse-item" href="">Update Biodata</a>
+                        <a class="collapse-item" href="">Upload CV</a>
+                        
                     </div>
                 </div>
             </li>
@@ -162,7 +162,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->username}}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}}</span>
                                 <i class="far fa-user"></i>
                             </a>
                             <!-- Dropdown - User Information -->
