@@ -29,8 +29,8 @@
                             </form>
                         </div>
                         @if (auth()->user()->cv)
-                            <div class="col-md-3 mt-3">
-                                <a class="btn btn-primary" target="_blank" href="{{asset('uploads/resumes/'.auth()->user()->cv)}}"><i class="fas fa-file-word"></i></a>
+                            <div class="col-md-3 mt-4">
+                                <a class="btn btn-primary" target="_blank" href="{{asset('uploads/resumes/'.auth()->user()->cv)}}"><i style="font-size: 90px;" class="fas fa-file-word"></i></a>
                             </div> 
                         @else
                             <p style="font-size: 60px;" class="ml-4 text-primary"><i class="fas fa-file-upload"></i></p>
