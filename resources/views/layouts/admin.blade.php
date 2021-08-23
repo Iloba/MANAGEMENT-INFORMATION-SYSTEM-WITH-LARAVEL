@@ -29,7 +29,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             
@@ -43,11 +43,11 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-            <li class="nav-item ">
+            {{-- <li class="nav-item ">
                 <a class="nav-link" href="#">
                     <i class="fas fa-users"></i>
                     <span>Staff Details</span></a>
-            </li>
+            </li> --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -55,15 +55,15 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseThree">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Update Biodata</span>
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Manage Staff</span>
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manage Details</h6>
-                        <a class="collapse-item" href="{{route('passport.create')}}">Upload Passport</a>
-                        <a class="collapse-item" href="{{route('biodata.create')}}">Update Biodata</a>
-                        <a class="collapse-item" href="{{route('cv.create')}}">Upload CV</a>
+                        <a class="collapse-item" href="">View Staff</a>
+                        {{-- <a class="collapse-item" href="{{route('biodata.create')}}">Update Biodata</a>
+                        <a class="collapse-item" href="{{route('cv.create')}}">Upload CV</a> --}}
                         
                     </div>
                 </div>

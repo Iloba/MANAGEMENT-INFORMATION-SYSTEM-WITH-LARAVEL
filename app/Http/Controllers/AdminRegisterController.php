@@ -6,6 +6,7 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Validation\Rules\Password;
 
 class AdminRegisterController extends Controller
 {
@@ -15,7 +16,12 @@ class AdminRegisterController extends Controller
             'name' => 'required',
             'email' => ['required', ' unique:admins'],
             'phone' => ['required', 'max:11', 'unique:admins'],
-            'password' => ['required', 'confirmed'],
+            'password' => [
+                
+                        'required', 'confirmed',
+                        Password::min(8)->letters()->numbers()->mixedCase()
+                
+                    ],
         ]);
 
         $user = Admin::create([
