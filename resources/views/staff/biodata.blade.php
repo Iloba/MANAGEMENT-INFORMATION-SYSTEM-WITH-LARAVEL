@@ -6,7 +6,7 @@
         <div class="col-md-11">
             @include('layouts.messages')
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }} | {{ __('Update Biodata') }}</div>
+                <div class="card-header bg-primary text-light">{{ __('Dashboard') }} | {{ __('Update Biodata') }}</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -124,6 +124,16 @@
                                 <input type="number" name="level" class="form-control" value="{{auth()->user()->level}}">
                                 <div>
                                     @error('level')
+                                         <span class="text-danger text-small">{{$message}}</span> 
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="text-dark" for=""><b>Staff_id</b></label>
+                                <input type="text" name="staff_id" class="form-control" value="{{auth()->user()->staff_id}}" disabled>
+                                <div>
+                                    @error('staff_id')
                                          <span class="text-danger text-small">{{$message}}</span> 
                                     @enderror
                                 </div>

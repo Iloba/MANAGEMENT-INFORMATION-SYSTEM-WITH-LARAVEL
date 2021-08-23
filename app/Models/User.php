@@ -31,6 +31,7 @@ class User extends Authenticatable
         'course',
         'level',
         'cv',
+        'staff_id',
     ];
 
     /**

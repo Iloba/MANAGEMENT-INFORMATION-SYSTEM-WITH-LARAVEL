@@ -23,6 +23,9 @@ class BiodataController extends Controller
             return back()->with('error', 'Please Select Gender');
         }
 
+        $staff_id = 'Comp/'.substr($request->lastname, 0,  3).'/'.substr($request->phone, 3, 7);
+
+
         auth()->user()->update([
             'lastname' => $request->lastname,
             'firstname' => $request->firstname,
@@ -33,6 +36,7 @@ class BiodataController extends Controller
             'office_address' => $request->office_address,
             'course' => $request->course,
             'level' => $request->level,
+            'staff_id' => $staff_id
         ]);
 
         return back()->with('success', 'Biodata Updated Successfully');

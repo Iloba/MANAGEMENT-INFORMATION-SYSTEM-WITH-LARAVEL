@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                
-                <div class="card-header">{{ __('Dashboard') }} | {{ __('Upload CV') }}</div>
+                <div class="card-header bg-primary text-light">{{ __('Dashboard') }} | {{ __('Upload CV') }}</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -28,9 +28,14 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-md-4">
-                           
-                        </div>
+                        @if (auth()->user()->cv)
+                            <div class="col-md-3 mt-3">
+                                <a class="btn btn-primary" target="_blank" href="{{asset('uploads/resumes/'.auth()->user()->cv)}}">View Document</a>
+                            </div> 
+                        @else
+                            <p></p>
+                        @endif
+                        
                         
                     </div>
                     

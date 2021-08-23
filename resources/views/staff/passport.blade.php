@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                
-                <div class="card-header">{{ __('Dashboard') }} | {{ __('Upload Passport') }}</div>
+                <div class="card-header bg-primary text-light">{{ __('Dashboard') }} | {{ __('Upload Passport') }}</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -27,9 +27,13 @@
                                 </div>
                             </form>
                         </div>
+                        @if (auth()->user()->passport)
                         <div class="col-md-4">
                             <img style="max-width: 120px" class="img-fluid rounded" src="{{asset('uploads/passport_photographs/'.auth()->user()->passport)}}" alt="User Passport">
                         </div>
+                        @else
+                            <img src="{{asset('img/user.png')}}" alt="img">
+                        @endif
                         
                     </div>
                     
