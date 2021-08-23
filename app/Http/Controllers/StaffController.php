@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class StaffController extends Controller
 {
-   
+   public function upload_passport(){
+       
+   }
     
 }

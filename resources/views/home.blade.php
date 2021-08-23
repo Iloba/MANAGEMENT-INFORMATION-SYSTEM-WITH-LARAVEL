@@ -16,7 +16,7 @@
                     <div class="row">
                         <div class="col-md-4 bg-gradient-primary p-5 m-5 text-light shadow-sm">
                             <p class="text-center"><i class="fa fa-user"></i> <br></p>
-                            <a class="text-light" href=""><p class=" text-center">Upload Passport</p></a>
+                            <a class="text-light" href="{{route('passport.create')}}"><p class=" text-center">Upload Passport</p></a>
                         </div>
                         <div class="col-md-4 p-5 bg-gradient-primary m-5 p-5 text-light  shadow-sm">
                             <p class="text-center"><i class="fa fa-user"></i> <br></p>
