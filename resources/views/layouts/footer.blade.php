@@ -11,6 +11,7 @@
 <body>
     <div class="bg-info p-4">
        <p class="text-center text-light"> &copy; Kaduna Polytechnic 2021</p>
+       <a class="nav-link text-center text-light" href="{{route('admin_login')}}">Admin</a>
     </div>
 </body>
 </html>

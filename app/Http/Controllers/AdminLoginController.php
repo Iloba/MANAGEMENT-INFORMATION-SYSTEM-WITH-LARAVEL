@@ -13,10 +13,14 @@ class AdminLoginController extends Controller
             'email' => 'required',
             'password' => [
                 
-                        'required', 'confirmed',
-                        Password::min(8)->letters()->numbers()->mixedCase()
-                
+                'required', 'confirmed',
+                Password::min(8)->letters()->numbers()->mixedCase()
+        
                     ],
         ]);
+
+
+        //login user
+
     }
 }
