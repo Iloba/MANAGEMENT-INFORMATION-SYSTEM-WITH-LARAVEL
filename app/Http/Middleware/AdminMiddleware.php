@@ -16,6 +16,12 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+         //Middleware Logic
+         if($request->path('dashboard') && !$request->session()->has('user')){
+            return redirect()->route('admin_login');
+        }
+
+
         return $next($request);
     }
 }

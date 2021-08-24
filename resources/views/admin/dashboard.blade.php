@@ -16,7 +16,7 @@
                     <div class="row">
                         <div class="col-md-4 bg-gradient-info p-5 m-5 text-light shadow-sm">
                             <p class="text-center"><i style="font-size: 50px;" class="fas fa-portrait"></i> <br></p>
-                            <a class="text-light" href=""><p class=" text-center">Manage Staff</p></a>
+                            <a class="text-light" href="{{route('all_staff')}}"><p class=" text-center">Manage Staff</p></a>
                         </div>
                         {{-- <div class="col-md-4 p-5 bg-gradient-primary m-5 p-5 text-light  shadow-sm">
                             <p class="text-center"><i style="font-size: 50px;" class="fas fa-table"></i> <br></p>

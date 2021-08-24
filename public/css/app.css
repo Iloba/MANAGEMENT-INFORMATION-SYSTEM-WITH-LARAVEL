@@ -10012,3 +10012,10 @@ a p:hover{
   text-decoration: none;
   
 }
+@media(max-width: 600px){
+  .center-text-on-mobile{
+    
+      text-align: center;
+   
+  }
+}

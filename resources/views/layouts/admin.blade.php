@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
@@ -61,7 +62,7 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manage Details</h6>
-                        <a class="collapse-item" href="">View Staff</a>
+                        <a class="collapse-item" href="{{route('all_staff')}}">View Staff</a>
                         {{-- <a class="collapse-item" href="{{route('biodata.create')}}">Update Biodata</a>
                         <a class="collapse-item" href="{{route('cv.create')}}">Upload CV</a> --}}
                         
