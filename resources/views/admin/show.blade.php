@@ -42,8 +42,8 @@
                         <a class="btn btn-danger btn-lg" 
 
                         onclick="
-                        event.PreventDefault();
-                        if(confirm({{'Do you Want to Delete '.$staff->firstname}})){
+                        event.preventDefault();
+                        if(confirm('{{'Do you Want to Delete '.$staff->firstname}}')){
                             document.getElementById('{{'form-delete'.$staff->id}}').submit();
                         }
                         ";
