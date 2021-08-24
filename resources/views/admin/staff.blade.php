@@ -23,7 +23,8 @@
                             @method('GET')
                                 <div class="input-group mb-2">
                                   <select name="sort" id="" class="form-control">
-                                      <option value="gender">Gender</option>
+                                      <option value="Male">Gender(Male)</option>
+                                      <option value="Female">Gender(Female)</option>
                                       <option value="level">Level</option>
                                   </select>
                                 <div class="input-group-prepend">
@@ -82,7 +83,7 @@
                                             <a class="nav-link" href="{{route('staff.show', $user->id)}}">{{$user->staff_id}}</a>
                                         </td>
                                         <td>
-                                            <a class="nav-link" href="{{route('staff.show', $user->id)}}">{{$user->level}</a>
+                                            <a class="nav-link" href="{{route('staff.show', $user->id)}}">{{$user->level}}</a>
                                         </td>
                                         
                                     </tr>

@@ -11,8 +11,16 @@ class StaffController extends Controller
    public function index(Request $request){
 
       $users = User::latest()->get();
+
+
+      //search
       if($request->has('search')){
          $users = User::where('name', 'like', "%{$request->search}%")->get();
+      }
+
+      //Sort  by gender
+      if($request->has('sort')){
+         $users = User::where('gender', 'like', "%{$request->sort}%")->get();
       }
 
       return view('admin.staff', compact('users'));
