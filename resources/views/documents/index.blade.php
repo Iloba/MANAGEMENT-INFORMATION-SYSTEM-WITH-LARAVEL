@@ -5,7 +5,26 @@
             @include('layouts.messages')
             <div class="card p-3">
                 <div class="card-header">
-                    <a class="btn btn-info text-light float-right" href="{{route('document.create')}}">Add Document</a>
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <form action="{{route('document.index')}}" method="POST">
+                                @csrf
+                                @method('GET')
+                                    <div class="input-group mb-2">
+                                        <input type="text" class="form-control" name="search" id="inlineFormInputGroup" placeholder="Search">
+                                    <div class="input-group-prepend">
+                                        <button type="submit" class="input-group-text btn btn-info"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="btn btn-info text-light float-right" href="{{route('document.create')}}">Add Document</a>
+                        </div>
+                    </div>
+                    
+                  
                 </div>
                 @if ($documents->count() > 0)
                 <div class="table-responsive">

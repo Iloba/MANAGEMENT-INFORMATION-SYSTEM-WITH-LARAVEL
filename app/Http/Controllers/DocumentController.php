@@ -14,9 +14,12 @@ class DocumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $documents = Document::latest()->get();
+        if($request->has('search')){
+            $documents = Document::where('name', 'like', "%{$request->search}%")->get();
+        }
 
         return view('documents.index', compact('documents'));
     }
