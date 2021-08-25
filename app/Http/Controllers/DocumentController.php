@@ -14,7 +14,9 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        dd('hello');
+        
+
+        return view('documents.index');
     }
 
     /**
