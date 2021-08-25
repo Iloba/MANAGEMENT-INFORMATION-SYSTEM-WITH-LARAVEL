@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\CvUploadController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\AdminRouteController;
 use App\Http\Controllers\AdminRegisterController;
@@ -28,9 +29,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('passport', PassportUploadController::class)->middleware('auth');
-Route::resource('biodata', BiodataController::class)->middleware('auth');
-Route::resource('cv', CvUploadController::class)->middleware('auth');
+Route::group(['prefix' => 'home', 'middleware' => 'auth'], function(){
+    Route::resource('passport', PassportUploadController::class)->middleware('auth');
+    Route::resource('biodata', BiodataController::class)->middleware('auth');
+    Route::resource('cv', CvUploadController::class)->middleware('auth');
+});
+
+
 
 
 Route::get('/AdminLogin', [AdminRouteController::class, 'login'])->name('admin_login');
@@ -46,5 +51,6 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'access' ], function(){
     Route::get('staff', [StaffController::class, 'index'])->name('all_staff');
     Route::get('staff/{user}', [StaffController::class, 'show'])->name('staff.show');
     Route::delete('staff/{id}/delete', [StaffController::class, 'delete'])->name('staff.delete');
+    Route::resource('document', DocumentController::class);
 
 });

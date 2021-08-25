@@ -63,9 +63,22 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manage Details</h6>
                         <a class="collapse-item" href="{{route('all_staff')}}">View Staff</a>
-                        {{-- <a class="collapse-item" href="{{route('biodata.create')}}">Update Biodata</a>
-                        <a class="collapse-item" href="{{route('cv.create')}}">Upload CV</a> --}}
                         
+                        
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
+                    aria-expanded="true" aria-controls="collapseFour">
+                    <i class="fas fa-file"></i>
+                    <span>Manage Documents</span>
+                </a>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Details</h6>
+                        <a class="collapse-item" href="{{route('all_staff')}}">View Documents</a>
                     </div>
                 </div>
             </li>
