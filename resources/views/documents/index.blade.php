@@ -7,6 +7,7 @@
                 <div class="card-header">
                     <a class="btn btn-info text-light float-right" href="{{route('document.create')}}">Add Document</a>
                 </div>
+                @if ($documents->count() > 0)
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         
@@ -21,7 +22,7 @@
                         </thead>
                         <tbody>
                             @foreach ($documents as $document)
-                                @if ($documents->count() > 0)
+                                
                                 <tr>
                                     <td>
                                         {{$document->id}}
@@ -51,14 +52,15 @@
                                         @method('DELETE')
                                     </form>
                                 </tr>
-                                @else
-                                <p>No Documents uploaded yet</p>
-                                @endif
+                                
                             @endforeach
                             
                         </tbody>
                     </table>
                 </div>
+                @else
+                    <p class="text-center">No Documents uploaded yet</p>
+                @endif
             </div>
         </div>
     </div>
