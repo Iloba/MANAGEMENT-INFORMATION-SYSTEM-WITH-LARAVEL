@@ -14,9 +14,9 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        
+        $documents = Document::latest()->get();
 
-        return view('documents.index');
+        return view('documents.index', compact('documents'));
     }
 
     /**
@@ -26,7 +26,7 @@ class DocumentController extends Controller
      */
     public function create()
     {
-        //
+        return view('documents.create');
     }
 
     /**
@@ -37,7 +37,33 @@ class DocumentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Validate Request
+        $request->validate([
+
+            'document' => ['required'],
+            'data' => ['required', 'max:255', 'string'],
+           
+        ]);
+
+        //Upload Document
+        if($request->has('document')){
+           
+            $file = $request->document->getClientOriginalName();
+
+            try {
+                $request->document->storeAs('document', $file, 'public_uploads');
+            } catch (Exception $error) {
+                return back()->with('errors', 'Could not upload Document, please Try again');
+            }
+        }
+
+        Document::create([
+
+            'document' => $file,
+            'name' => $request->data
+        ]); 
+
+        return redirect()->route('document.index')->with('success', 'Document Upload Successfully');
     }
 
     /**

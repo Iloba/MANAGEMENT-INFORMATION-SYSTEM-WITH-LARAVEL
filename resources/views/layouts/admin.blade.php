@@ -78,7 +78,7 @@
                 <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manage Details</h6>
-                        <a class="collapse-item" href="{{route('all_staff')}}">View Documents</a>
+                        <a class="collapse-item" href="{{route('document.index')}}">View Documents</a>
                     </div>
                 </div>
             </li>
