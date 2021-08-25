@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Document;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class DocumentController extends Controller
@@ -73,7 +74,7 @@ class DocumentController extends Controller
     {
         $document = Document::find($id);
 
-        Storage::delete('public/uploads/documents/'.$document);
+         File::delete('uploads/document/'.$document->document);
 
         $document->delete();
 
