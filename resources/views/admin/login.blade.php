@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <div id="body">
-        <div class="container">
-            <div class="col-md-6 mx-auto">
-                <div class="card p-4">
+        <div class="container pt-5"> 
+            <div class="col-md-6 mx-auto mt-5">
+                <div class="card p-4 mt-5">
                     
                     <h4 class="text-center mb-5">Login</h4>
                     
