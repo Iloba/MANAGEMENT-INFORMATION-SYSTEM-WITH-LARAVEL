@@ -10007,6 +10007,11 @@ h3 {
 /* My Css Starts */
 #body{
   min-height: 100vh;
+  background-image: url('../img/computer-room.jpg');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 a p:hover{
   text-decoration: none;

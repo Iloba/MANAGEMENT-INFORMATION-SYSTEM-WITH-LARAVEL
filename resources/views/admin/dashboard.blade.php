@@ -18,14 +18,10 @@
                             <p class="text-center"><i style="font-size: 50px;" class="fas fa-portrait"></i> <br></p>
                             <a class="text-light" href="{{route('all_staff')}}"><p class=" text-center">Manage Staff</p></a>
                         </div>
-                        {{-- <div class="col-md-4 p-5 bg-gradient-primary m-5 p-5 text-light  shadow-sm">
-                            <p class="text-center"><i style="font-size: 50px;" class="fas fa-table"></i> <br></p>
-                            <a class="text-light text-center" href="{{route('biodata.create')}}"><p class="text-center">Update BioData</p></a>
-                           
-                        </div> --}}
+                        
                         <div class="col-md-4 p-5 bg-gradient-info m-5 p-5 text-light  shadow-sm">
                             <p class="text-center"><i style="font-size: 50px;" class="fas fa-file-upload"></i> <br></p>
-                            <a class="text-light text-center" href=""><p class="text-center">Upload Documents</p></a>
+                            <a class="text-light text-center" href="{{route('document.create')}}"><p class="text-center">Upload Documents</p></a>
                             
                         </div>
                         
