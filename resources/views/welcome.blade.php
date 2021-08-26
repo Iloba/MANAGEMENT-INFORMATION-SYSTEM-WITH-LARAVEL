@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-md-10 mx-auto mt-5">
                         <div class="card p-3 shadow-sm">
-                            <h1  class="text-center text-uppercase text-secondary font-bold mt-3">Management Information system for computer science Staff</h1>
+                            <h1  class="text-center text-uppercase text-secondary font-bold mt-3" id="heading">Management Information system for computer science Staff</h1>
                             <div class="mx-auto mt-3 mb-3 ">
                                 <a class="btn btn-success mx-auto m-2" href="{{route('register')}}">Register</a>
                                 <a class="btn btn-info text-light m-2" href="{{route('login')}}">Login</a>
