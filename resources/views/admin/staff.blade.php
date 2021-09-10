@@ -18,20 +18,7 @@
                         </form>
                     </div>
                     <div class="col-md-6">
-                        <form action="{{route('all_staff')}}" method="POST">
-                            @csrf
-                            @method('GET')
-                                <div class="input-group mb-2">
-                                  <select name="sort" id="" class="form-control">
-                                      <option value="Male">Gender(Male)</option>
-                                      <option value="Female">Gender(Female)</option>
-                                      <option value="level">Level</option>
-                                  </select>
-                                <div class="input-group-prepend">
-                                    <button type="submit" class="input-group-text btn btn-info"><i class="fa fa-search"></i></button>
-                                </div>
-                            </div>
-                        </form>
+                        &nbsp;
                     </div>
                    
                 </div>

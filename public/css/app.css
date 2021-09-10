@@ -10010,6 +10010,7 @@ h3 {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 #heading{
   font-weight: bold;
@@ -10021,6 +10022,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
 }
 a p:hover{
   text-decoration: none;
